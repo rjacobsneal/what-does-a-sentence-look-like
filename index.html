@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>message</title>
+    <script src="../p5.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>what does a sentence look like?</h1>
+      <p>
+        write a 100-character message using the alphanumeric keyboard and space
+        bar, and press enter to. <br />each keystroke maps to a unique color
+      </p>
+      <div id="canvas-container" class="canvas-container"></div>
+      <button id="save-button" class="save-button" onclick="saveCanvasAsPNG()">
+        save message as png
+      </button>
+    </main>
+    <script src="sketch.js" type="text/JavaScript"></script>
+  </body>
+</html>

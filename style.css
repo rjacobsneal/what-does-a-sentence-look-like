@@ -1,0 +1,40 @@
+body {
+  background-color: white; /* Change to your desired background color */
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  height: 100vh;
+  color: black; /* Change to your desired text color */
+  text-align: left; /* Align the text to the center */
+  font-family: "Helvetica", sans-serif; /* Use single quotes for font names with spaces */
+  margin: 0; /* Remove default margin on body */
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+p {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.save-button {
+  display: block;
+  background-color: white; /* Change to your desired button background color */
+  color: black; /* Change to your desired button text color */
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.canvas-container {
+  width: 720px;
+  height: 720px;
+  border: 2px solid black;
+  margin-bottom: 8px;
+}
