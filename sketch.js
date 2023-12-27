@@ -18,6 +18,15 @@ function draw() {
 }
 
 function keyPressed() {
+  handleInput();
+}
+
+function touchStarted() {
+  handleInput();
+  return false; // prevent default
+}
+
+function handleInput() {
   let keyIndex = -1;
   if ((key >= "a" && key <= "z") || (key >= "0" && key <= "9") || key == " ") {
     const color = mapKeyToColor(key);
