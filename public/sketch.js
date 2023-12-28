@@ -7,7 +7,7 @@ let backgroundColor = 256;
 let canvasSize;
 
 function setup() {
-  canvasSize = min(windowWidth, windowHeight) / 2;
+  canvasSize = min(windowWidth, windowHeight) * 0.75;
   canvas = createCanvas(canvasSize, canvasSize);
   canvas.parent("canvas-container");
   buffer = createGraphics(canvasSize, canvasSize);
@@ -128,6 +128,10 @@ function hsvToRgb(h, s, v) {
 
 function saveCanvasAsPNG() {
   saveCanvas("canvas", "png");
+}
+
+function showKeyboard() {
+  document.getElementById("keyboard-input").focus();
 }
 
 // function windowResized() {
