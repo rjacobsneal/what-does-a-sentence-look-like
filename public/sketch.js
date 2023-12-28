@@ -7,7 +7,7 @@ let backgroundColor = 256;
 let canvasSize;
 
 function setup() {
-  canvasSize = min(windowWidth, windowHeight) * 0.85;
+  canvasSize = min(windowWidth, windowHeight) * 0.75;
   canvas = createCanvas(canvasSize, canvasSize);
   canvas.parent("canvas-container");
   buffer = createGraphics(canvasSize, canvasSize);
@@ -132,6 +132,7 @@ function saveCanvasAsPNG() {
 }
 
 function showKeyboard() {
+  console.log("keyboard");
   document.getElementById("keyboard-input").focus();
 }
 
