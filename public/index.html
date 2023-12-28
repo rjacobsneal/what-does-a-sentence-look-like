@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>message</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="flex flex-wrap m-4">
+        <div class="flex-col max-w-screen-md mb-10 pr-20">
+          <h1 class="text-6xl font-medium"> what does a </h1>
+            <h1 class="text-9xl -mt-4">sentence</h1>
+            <h1 class="text-6xl font-medium">look like? </h1>
+          </h1>
+          <p class="text-2xl mt-8">
+            write a 100-character message using the lowercase alphanumeric
+            keyboard (a-z and 0-9) and space bar • each keystroke maps to a
+            unique color • press enter key to clear • save and share your
+            message • make something beautiful
+          </p>
+        </div>
+
+        <div class="flex-col">
+          <div
+            class="border-2 border-black max-w-fit"
+            id="canvas-container"
+          ></div>
+          <button
+            id="save-button"
+            class="w-full text-right save-button mt-1 mr-3 text-1xl"
+            onclick="saveCanvasAsPNG()"
+          >
+            save message as .png
+          </button>
+        </div>
+      </div>
+      <script src="sketch.js" type="text/JavaScript"></script>
+    </main>
+  </body>
+</html>
