@@ -7,7 +7,7 @@ let backgroundColor = 256;
 let canvasSize;
 
 function setup() {
-  canvasSize = min(windowWidth, windowHeight) * 0.75;
+  canvasSize = min(windowWidth, windowHeight) * 0.88;
   canvas = createCanvas(canvasSize, canvasSize);
   canvas.parent("canvas-container");
   buffer = createGraphics(canvasSize, canvasSize);
