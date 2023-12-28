@@ -13,7 +13,6 @@ function setup() {
   buffer = createGraphics(canvasSize, canvasSize);
   buffer.noStroke();
   background(backgroundColor);
-  canvas.mousePressed(showKeyboard);
 }
 
 function draw() {
@@ -129,11 +128,6 @@ function hsvToRgb(h, s, v) {
 
 function saveCanvasAsPNG() {
   saveCanvas("canvas", "png");
-}
-
-function showKeyboard() {
-  console.log("keyboard");
-  document.getElementById("keyboard-input").focus();
 }
 
 // function windowResized() {

@@ -9,11 +9,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <input
-      type="text"
-      id="keyboard-input"
-      style="position: absolute; top: -100px"
-    />
     <main>
       <div class="flex flex-wrap m-4">
         <div class="flex-col max-w-screen-md mb-10 pr-20">
@@ -26,6 +21,14 @@
             unique color • press enter key to clear • save and share your
             message • make something beautiful
           </p>
+          <div class="mt-6" onclick='$("#foo").focus();'>
+            <input
+              type="text"
+              class="w-3/4 border-2 border-black rounded-md text-gray-100"
+              id="foo"
+              placeholder=" mobile users begin typing here"
+            />
+          </div>
         </div>
 
         <div class="flex-col">
