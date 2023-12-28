@@ -27,8 +27,13 @@ function keyPressed() {
 }
 
 function handleInput() {
-  if ((key >= "a" && key <= "z") || (key >= "0" && key <= "9") || key == " ") {
-    const color = mapKeyToColor(key);
+  if (
+    (key.toLowerCase() >= "a" && key.toLowerCase() <= "z" && key.length == 1) ||
+    (key >= "0" && key <= "9") ||
+    key == " "
+  ) {
+    console.log(key.toLowerCase());
+    const color = mapKeyToColor(key.toLowerCase());
     buffer.fill(color.r, color.g, color.b);
     buffer.rect(
       (charCount % charPerRow) * rectWidth,

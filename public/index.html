@@ -16,10 +16,10 @@
           <h1 class="text-9xl -mt-6 -mb-1">sentence</h1>
           <h1 class="text-6xl font-medium">look like?</h1>
           <p class="text-2xl mt-3 mb-5 leading-tight">
-            write a 100-character message using the lowercase alphanumeric
-            keyboard (a-z and 0-9) and space bar • each keystroke maps to a
-            unique color • press enter key to clear • save and share your
-            message • make something beautiful
+            write a 100-character message using the alphanumeric keyboard (a-z
+            and 0-9) and space bar // each keystroke maps to a unique color //
+            press enter key to clear // save and share your message // make
+            something beautiful
           </p>
           <div onclick='$("#foo").focus();'>
             <input
@@ -36,13 +36,15 @@
             class="border-2 border-black max-w-fit"
             id="canvas-container"
           ></div>
-          <button
-            id="save-button"
-            class="w-full text-right save-button mt-1 mr-3 text-1xl"
-            onclick="saveCanvasAsPNG()"
-          >
-            save message as .png
-          </button>
+          <div class="w-full text-right save-button my-2 text-1xl">
+            <button
+              id="save-button"
+              class="border-2 border-black rounded-md"
+              onclick="saveCanvasAsPNG()"
+            >
+              <div class="mx-2">save message as .png</div>
+            </button>
+          </div>
         </div>
       </div>
       <script src="sketch.js" type="text/JavaScript"></script>
