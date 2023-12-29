@@ -10,64 +10,14 @@
   </head>
   <body>
     <main>
-      <div class="flex flex-wrap m-4 justify-between">
-        <div class="flex-col max-w-2xl mb-10 pr-20">
-          <h1 class="text-6xl font-medium">what does a</h1>
-          <h1 class="text-9xl -mt-6 -mb-1">sentence</h1>
-          <h1 class="text-6xl font-medium">look like?</h1>
-          <p class="text-2xl mt-3 mb-5 leading-tight">
-            write a 100-character message using the alphanumeric keyboard (a-z
-            and 0-9) and space bar // each keystroke maps to a unique color //
-            press enter key to clear // save and share your message // make
-            something beautiful
-          </p>
-          <div onclick='$("#foo").focus();'>
-            <input
-              type="text"
-              class="w-3/4 border-2 border-black rounded-md text-gray-100"
-              id="foo"
-              placeholder=" mobile users begin typing here"
-            />
-          </div>
-        </div>
-
-        <div class="flex-col">
-          <div
-            class="border-2 border-black max-w-fit"
-            id="canvas-container"
-          ></div>
-          <div class="w-full text-right save-button my-2 text-1xl">
-            <button
-              id="save-button"
-              class="border-2 border-black rounded-md"
-              onclick="saveCanvasAsPNG()"
-            >
-              <div class="mx-2">save message as .png</div>
-            </button>
-          </div>
-        </div>
-      </div>
-      <script src="sketch.js" type="text/JavaScript"></script>
-    </main>
-  </body>
-</html><!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css" />
-    <title>message</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <main>
-      <div class="flex flex-wrap m-4 justify-between">
-        <div class="flex-col w-2xl max-w-full mb-10 pr-20">
-          <h1 class="text-6xl font-medium">what does a</h1>
-          <h1 class="text-9xl -mt-6 -mb-1">sentence</h1>
-          <h1 class="text-6xl font-medium">look like?</h1>
-          <p class="text-2xl mt-3 mb-5 leading-tight">
+      <div
+        class="flex flex-wrap w-full p-4 place-self-center md:justify-between"
+      >
+        <div class="flex-col md:max-w-2xl mb-5 mr-5">
+          <h1 class="text-4xl md:text-6xl font-medium">what does a</h1>
+          <h1 class="text-6xl md:text-9xl -mt-2 md:-mt-6 md:-mb-1">sentence</h1>
+          <h1 class="text-4xl md:text-6xl font-medium">look like?</h1>
+          <p class="text-xl md:text-2xl mt-3 mb-5 leading-tight">
             write a 100-character message using the alphanumeric keyboard (a-z
             and 0-9) and space bar // each keystroke maps to a unique color //
             press enter key to clear // save and share your message // make
