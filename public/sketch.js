@@ -8,20 +8,24 @@ let canvasSize;
 
 function setup() {
   if (windowWidth <= windowHeight) {
-    canvasSize = windowWidth * 0.9;
+    canvasSize = Math.floor(windowWidth * 0.9);
   } else {
-    canvasSize = windowHeight * 0.75;
+    canvasSize = Math.floor(windowHeight * 0.75);
   }
-  canvas = createCanvas(canvasSize, canvasSize);
+  canvas = createCanvas(
+    Math.floor(canvasSize / charPerRow) * charPerRow,
+    Math.floor(canvasSize / rows) * rows
+  );
   canvas.parent("canvas-container");
   buffer = createGraphics(canvasSize, canvasSize);
   buffer.noStroke();
+  buffer.smooth(false);
   background(backgroundColor);
 }
 
 function draw() {
-  rectWidth = canvasSize / charPerRow;
-  rectHeightOffset = canvasSize / rows;
+  rectWidth = Math.floor(canvasSize / charPerRow);
+  rectHeightOffset = Math.floor(canvasSize / rows);
   background(256);
   image(buffer, 0, 0);
 }
@@ -31,12 +35,15 @@ function keyPressed() {
 }
 
 function handleInput() {
+  console.log(key);
   if (
-    (key.toLowerCase() >= "a" && key.toLowerCase() <= "z" && key.length == 1) ||
-    (key >= "0" && key <= "9") ||
-    key == " "
+    charCount < 100 &&
+    ((key.toLowerCase() >= "a" &&
+      key.toLowerCase() <= "z" &&
+      key.length == 1) ||
+      (key >= "0" && key <= "9") ||
+      key == " ")
   ) {
-    console.log(key.toLowerCase());
     const color = mapKeyToColor(key.toLowerCase());
     buffer.fill(color.r, color.g, color.b);
     buffer.rect(
@@ -46,6 +53,16 @@ function handleInput() {
       canvasSize
     );
     charCount++;
+  } else if (key == "Backspace" && charCount > 0) {
+    charCount--;
+    const color = getPrevColor();
+    buffer.fill(color.r, color.g, color.b);
+    buffer.rect(
+      (charCount % charPerRow) * rectWidth,
+      Math.floor(charCount / charPerRow) * rectHeightOffset,
+      rectWidth,
+      canvasSize
+    );
   } else if (key == "Enter") {
     buffer.background(256);
     charCount = 0;
@@ -135,18 +152,24 @@ function hsvToRgb(h, s, v) {
   };
 }
 
+function getPrevColor() {
+  let r, g, b;
+  if (charCount < charPerRow) {
+    r = backgroundColor;
+    g = backgroundColor;
+    b = backgroundColor;
+  } else {
+    let pixelData = buffer.get(
+      (charCount % charPerRow) * rectWidth + 2,
+      Math.floor(charCount / charPerRow) * rectHeightOffset - 2
+    );
+    r = pixelData[0];
+    g = pixelData[1];
+    b = pixelData[2];
+  }
+  return { r, g, b };
+}
+
 function saveCanvasAsPNG() {
   saveCanvas("canvas", "png");
 }
-
-// function windowResized() {
-//   // Ensure the canvas remains square
-//   let newSize = min(windowWidth, windowHeight);
-//   if (newSize < canvasSize) {
-//     canvasSize = newSize;
-//     let newBuffer = createGraphics(canvasSize, canvasSize);
-//     newBuffer.image(buffer, 0, 0, canvasSize, canvasSize);
-//     newBuffer.noStroke();
-//     buffer = newBuffer;
-//   }
-// }

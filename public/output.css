@@ -694,6 +694,18 @@ video {
   width: 41.666667%;
 }
 
+.w-8\/12 {
+  width: 66.666667%;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -836,6 +848,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -864,6 +881,10 @@ video {
 .text-gray-50 {
   --tw-text-opacity: 1;
   color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+.text-transparent {
+  color: transparent;
 }
 
 @media (min-width: 640px) {
