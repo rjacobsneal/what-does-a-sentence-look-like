@@ -664,11 +664,6 @@ video {
   color: transparent;
 }
 
-.square {
-  position: absolute;
-  z-index: -1;
-}
-
 @keyframes floatAnimation {
   from {
     transform: translateY(0vh);
