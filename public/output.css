@@ -552,10 +552,6 @@ video {
   position: relative;
 }
 
-.m-0 {
-  margin: 0px;
-}
-
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -582,6 +578,10 @@ video {
   display: flex;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-9\/12 {
   width: 75%;
 }
@@ -605,10 +605,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .rounded-md {
@@ -664,6 +660,16 @@ video {
   color: transparent;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes floatAnimation {
   from {
     transform: translateY(0vh);
@@ -672,10 +678,6 @@ video {
   to {
     transform: translateY(-120vh);
   }
-}
-
-.hover\:pointer-events-none:hover {
-  pointer-events: none;
 }
 
 .hover\:bg-neon-yellow:hover {

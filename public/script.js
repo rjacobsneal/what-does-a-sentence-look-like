@@ -22,7 +22,7 @@ function createFloatingSquare(i) {
 
   const element = document.createElement("div");
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  const squareSize = Math.min(window.innerWidth, window.innerHeight) * 0.09;
+  const squareSize = (window.innerWidth * 0.75) / numberOfSquares;
 
   element.className = "square";
   element.style.position = "absolute";
@@ -30,15 +30,15 @@ function createFloatingSquare(i) {
   element.style.backgroundColor = randomColor;
   element.style.width = `${squareSize}px`;
   element.style.height = `${squareSize}px`;
+  element.style.opacity = 0;
 
-  // Randomly position each square on the screen
-  const x = i * (window.innerWidth / numberOfSquares);
+  const x = i * (window.innerWidth / numberOfSquares) + squareSize / 5;
   const y = window.innerHeight + squareSize;
-  element.style.bottom = `-${3 * squareSize}px`;
+  element.style.bottom = `${-squareSize}px`;
   element.style.left = `${x}px`;
 
   const animationDelay = Math.random() * animationDuration;
-  element.style.animation = `floatAnimation ${animationDuration}s linear ${animationDelay}s infinite`;
+  element.style.animation = `floatAnimation ${animationDuration}s linear ${animationDelay}s infinite, fadeIn 0s ${animationDelay}s forwards`;
 
   document.body.appendChild(element);
 }
