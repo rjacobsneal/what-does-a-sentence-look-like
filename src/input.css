@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.square {
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes floatAnimation {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-120vh);
+  }
+}

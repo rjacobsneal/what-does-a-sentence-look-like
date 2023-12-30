@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
+    <!-- created by: reese jacobs neal, https://github.com/rjacobsneal/ -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
-    <title>message</title>
+    <title>wordpaint</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="relative overflow-hidden m-0">
     <main>
-      <div
-        class="flex flex-wrap w-full p-4 place-self-center md:justify-between"
-      >
-        <div class="flex-col md:max-w-2xl mb-5 mr-5">
+      <div class="flex flex-wrap w-full justify-between p-4">
+        <div class="flex-col md:max-w-2xl mb-5">
           <h1 class="text-4xl md:text-6xl font-medium">what does a</h1>
           <h1 class="text-6xl md:text-9xl -mt-2 md:-mt-6 md:-mb-1">sentence</h1>
           <h1 class="text-4xl md:text-6xl font-medium">look like?</h1>
@@ -42,7 +41,7 @@
           <div class="w-full text-right save-button my-2 text-1xl">
             <button
               id="save-button"
-              class="border-2 border-black rounded-md"
+              class="border-2 border-black rounded-md bg-white"
               onclick="saveCanvasAsPNG()"
             >
               <div class="mx-2">save message as .png</div>
@@ -50,6 +49,7 @@
           </div>
         </div>
       </div>
+      <script src="script.js" type="text/JavaScript"></script>
       <script src="sketch.js" type="text/JavaScript"></script>
     </main>
   </body>
