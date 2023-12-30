@@ -1,5 +1,5 @@
 const numberOfSquares = 8;
-const animationDuration = 18; // seconds
+const animationDuration = 25; // seconds
 
 for (let i = 0; i < numberOfSquares; i++) {
   createFloatingSquare(i);
