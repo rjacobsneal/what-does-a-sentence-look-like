@@ -32,11 +32,12 @@
           </p>
           <div onclick='$("#foo").focus();'>
             <input
-              type="password"
+              type="text"
               class="w-9/12 border-2 border-black rounded-md text-1xl text-transparent focus:outline-teal-400"
               id="foo"
               placeholder=" mobile users begin typing here"
               autocomplete="off"
+              oninput="redactInput(this)"
             />
           </div>
         </div>
@@ -57,8 +58,9 @@
           </div>
         </div>
       </div>
-      <script src="script.js" type="text/JavaScript"></script>
+      <script src="background.js" type="text/JavaScript"></script>
       <script src="sketch.js" type="text/JavaScript"></script>
+      <script src="helper.js" type="text/JavaScript"></script>
     </main>
   </body>
 </html>
