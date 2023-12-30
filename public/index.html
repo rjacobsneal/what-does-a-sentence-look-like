@@ -15,8 +15,8 @@
   </head>
   <body class="relative">
     <main>
-      <div class="flex flex-wrap w-full h-screen justify-between p-4">
-        <div class="flex-col md:max-w-2xl mb-5">
+      <div class="flex flex-wrap w-full h-screen justify-between align-top p-4">
+        <div class="flex-col h-fit md:max-w-2xl">
           <h1 class="text-4xl md:text-6xl font-medium">what does a</h1>
           <h1
             class="text-6xl md:text-9xl -mt-2 md:-mt-6 md:-mb-1 hover:text-fuchsia-500"
@@ -24,16 +24,16 @@
             sentence
           </h1>
           <h1 class="text-4xl md:text-6xl font-medium">look like?</h1>
-          <p class="text-xl md:text-2xl mt-3 mb-5 leading-tight">
-            write a 100-character message using the alphanumeric keyboard and
-            space bar // each keystroke maps to a unique color // "backspace"
-            removes 1 keystroke // "return" clears entire canvas // save and
-            share your message // make something beautiful
+          <p class="text-xl md:text-2xl my-3 leading-tight">
+            write a 100-character message using the alphanumeric keyboard &
+            space bar // each key maps to a unique color // backspace undoes 1
+            keystroke // return clears canvas // save & share your message //
+            make something beautiful :3
           </p>
           <div onclick='$("#foo").focus();'>
             <input
               type="text"
-              class="w-9/12 border-2 border-black rounded-md text-1xl text-transparent focus:outline-teal-400"
+              class="w-9/12 border-2 border-black rounded-md text-1xl text-transparent focus:outline-teal-400 mb-4"
               id="foo"
               placeholder=" mobile users begin typing here"
               autocomplete="off"
@@ -42,12 +42,12 @@
           </div>
         </div>
 
-        <div class="flex-col">
+        <div class="flex-col h-full">
           <div
             class="border-2 border-black max-w-fit"
             id="canvas-container"
           ></div>
-          <div class="w-full text-right save-button my-2 text-1xl">
+          <div class="w-full text-right save-button my-3 text-1xl">
             <button
               id="save-button"
               class="border-2 border-black rounded-md bg-white hover:bg-neon-yellow active:bg-yellow-400"
