@@ -674,6 +674,29 @@ video {
   }
 }
 
+.hover\:pointer-events-none:hover {
+  pointer-events: none;
+}
+
+.hover\:bg-neon-yellow:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 231 0 / var(--tw-bg-opacity));
+}
+
+.hover\:text-fuchsia-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(217 70 239 / var(--tw-text-opacity));
+}
+
+.focus\:outline-teal-400:focus {
+  outline-color: #2dd4bf;
+}
+
+.active\:bg-yellow-400:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:-mb-1 {
     margin-bottom: -0.25rem;

@@ -1,5 +1,5 @@
-const numberOfSquares = 10;
-const animationDuration = 8; // seconds
+const numberOfSquares = 8;
+const animationDuration = 18; // seconds
 
 for (let i = 0; i < numberOfSquares; i++) {
   createFloatingSquare(i);
@@ -34,8 +34,8 @@ function createFloatingSquare(i) {
   // Randomly position each square on the screen
   const x = i * (window.innerWidth / numberOfSquares);
   const y = window.innerHeight + squareSize;
+  element.style.bottom = `-${3 * squareSize}px`;
   element.style.left = `${x}px`;
-  element.style.top = `${y}px`;
 
   const animationDelay = Math.random() * animationDuration;
   element.style.animation = `floatAnimation ${animationDuration}s linear ${animationDelay}s infinite`;
